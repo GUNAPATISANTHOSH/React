@@ -6,11 +6,13 @@
 //   </div>)
 // }
 // export default App;
-import CompA from './components/CompA';
+import CompA from './components/CompA'
 function App(){
-  return (<div>
-    <h2>App Component</h2>
-    <CompA />
-  </div>)
+  return (
+    <div>
+      <h1>PROPS</h1>
+      <CompA/>
+    </div>
+  )
 }
 export default App;
