@@ -16,7 +16,7 @@
 // //   )
 // // }
 // // export default App;
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
+// import '../node_modules/bootstrap/dist/css/bootstrap.css'
 // import Users  from "./props/Users"
 // let App=()=>{
 //   return <div>
@@ -30,6 +30,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css'
 // export default App;
 // import Message  from "./State/Message";
 import Counter from "./State/Counter";
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+
 let App =()=>{
   return <div>
     <Counter/>

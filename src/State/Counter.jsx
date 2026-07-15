@@ -12,9 +12,10 @@ let Counter=()=>{
         <br />
         <h1>Counter Component</h1>
         <br />
-        <button onClick={dec}>-</button>
-        {Counter}
-        <button onClick={inc}>+</button>
+        <button className="btn btn-danger" onClick={dec}>-</button>
+        <span className="mx-3 fs-3">{Counter}</span> 
+        {/* {Counter} */}
+        <button className="btn btn-primary" onClick={inc}>+</button>
     </div>
 }
 export default Counter;
