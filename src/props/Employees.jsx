@@ -2,10 +2,10 @@ let Employees=(x)=>{
     let {employees}=x
     return <div>
             <h2>React components</h2>
-            <pre>{JSON.stringify(x)}</pre>
-            <pre>{JSON.stringify(employees)}</pre>
-            <table border="2">
-                <thead>
+            {/* <pre>{JSON.stringify(x)}</pre>
+            <pre>{JSON.stringify(employees)}</pre> */}
+            <table className="table table-bordered table-striped ">
+                <thead className="table table-dark">
                     <th>Id</th>
                     <th>Name</th>
                     <th>Email</th>

@@ -1,0 +1,2 @@
+sending data from one component to anothers
+immutable
