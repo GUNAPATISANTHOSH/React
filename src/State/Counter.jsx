@@ -1,9 +1,11 @@
 import { useState } from "react";
 
 let Counter=()=>{
-    let [Counter,setCounter]=useState(1)
+    let [Counter,setCounter]=useState(0 )
     let dec=()=>{
+        if (Counter>0){
         setCounter(Counter-1)
+        }
     }
     let inc=()=>{
         setCounter(Counter+1)
