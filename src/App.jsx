@@ -32,11 +32,12 @@
 // import Counter from "./State/Counter";
 // import Messages from './State/Messages'
 import Message from './EventBinding/Message';
+import Table from './EventBinding/Table';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
 let App =()=>{
   return <div>
-    <Message/>
+    <Table/>
   </div>
 }
 export default App;
