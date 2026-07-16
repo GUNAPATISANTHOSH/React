@@ -29,12 +29,13 @@
 // }
 // export default App;
 // import Message  from "./State/Message";
-import Counter from "./State/Counter";
+// import Counter from "./State/Counter";
+import Messages from './State/Messages'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
 let App =()=>{
   return <div>
-    <Counter/>
+    <Messages/>
   </div>
 }
 export default App;
