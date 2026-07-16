@@ -30,12 +30,13 @@
 // export default App;
 // import Message  from "./State/Message";
 // import Counter from "./State/Counter";
-import Messages from './State/Messages'
+// import Messages from './State/Messages'
+import Message from './EventBinding/Message';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
 let App =()=>{
   return <div>
-    <Messages/>
+    <Message/>
   </div>
 }
 export default App;
