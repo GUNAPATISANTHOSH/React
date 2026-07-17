@@ -34,10 +34,12 @@
 import Message from './EventBinding/Message';
 import Table from './EventBinding/Table';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-
+// import Users from './Httpex/users';
+import Effect from './Httpex/Effect.jsx';
+//import Users from './Httpex/Effect.jsx';
 let App =()=>{
   return <div>
-    <Table/>
+    <Effect/>
   </div>
 }
 export default App;
