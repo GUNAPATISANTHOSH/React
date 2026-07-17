@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-
 let Effect = () => {
-    const [users, setUsers] = useState([]);
-
+    let [users, setUsers] = useState([]);
     useEffect(() => {
         Axios.get("https://jsonplaceholder.typicode.com/users")
             .then((resp) => {
@@ -13,11 +11,9 @@ let Effect = () => {
                 console.log(error);
             });
     }, []);
-
     return (
         <React.Fragment>
             <h3>User Component</h3>
-
             <table border="3">
                 <thead>
                     <tr>
@@ -26,7 +22,6 @@ let Effect = () => {
                         <th>City</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     {users.map((user) => (
                         <tr key={user.id}>
@@ -40,5 +35,4 @@ let Effect = () => {
         </React.Fragment>
     );
 };
-
 export default Effect;

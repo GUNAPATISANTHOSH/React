@@ -1,18 +1,38 @@
+import { useEffect, useState } from "react"
 import axios from "axios";
-import { useState } from "react";
 let Users=()=>{
-    let[users,setUsers]=useState([])
-    let usersHandler=()=>{
-        axios.get('https://jsonplaceholder.typicode.com/users')
+    let[users,setUsers]=useState([]);
+    useEffect(()=>{
+        axios.get("https://jsonplaceholder.typicode.com/users")
         .then((resp)=>{
-            setUsers(resp.data)
+            setUsers(resp.data);
         })
-        .catch()
-    }
-    return <div>
-        <pre>{JSON.stringify(users)}</pre>
-        <h3>User Component</h3>
-        <button onClick={usersHandler}>GET USERS</button>
-    </div>
+        .catch((error)=>{
+            console.log(error);
+        });
+    },[]);
+    return ( 
+        <div>
+            <h3>User Component</h3>
+            <table border={2}>
+                <thead>
+                    <tr>
+                        <th>id </th>
+                        <th>Name</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {users.map((users)=>(
+                        <tr>
+                            <td>{users.id}</td>
+                            <td>{users.name}</td>
+                            <td>{users.address.city}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    )
 }
-export default Users;
+export default Users;   
