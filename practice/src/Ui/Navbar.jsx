@@ -8,6 +8,7 @@ let Navbar=()=>{
             <Link to="/about" className="nav-link">About</Link>
             <Link to="/services" className="nav-link">Services</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
+            <Link to="/login" className="nav-link">Login</Link>
         </ul>
         </div>
     </nav>
