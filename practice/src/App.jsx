@@ -6,11 +6,13 @@
 // }
 // export default App;
 
+import Reg from "./Registration/Reg";
 import Register from "./Registration/Register"
 import "bootstrap/dist/css/bootstrap.css"
 let App=()=>{
   return <div>
-    <Register/>
+    {/* <Register/> */}
+    <Reg/>
   </div>
 }
 export default App;

@@ -1,7 +1,6 @@
 import { useState } from "react";
-
 let Register =()=>{
-    let[user,setUser]=useState({'username':'','mobile':'','date':'','gender':'','state':'','textbox':''})
+    let[user,setUser]=useState({'username':'','mobile':'','date':'','gender':'','state':'','textbox':'','checkbox':''})
     let usernameHandler=(event)=>{
         setUser({...user,username:event.target.value})
     }
@@ -16,21 +15,24 @@ let Register =()=>{
     }
     let stateHandler = (event) => {
     console.log(event.target.value);
-
     setUser({...user,state: event.target.value});
     };
     let messageHandler=()=>{
         setUser({...user,textbox:event.target.value})
     }
+    let checkboxHandler=()=>{
+        setUser({...user,checkbox:event.target.value})
+    }
     let registerHandler=()=>{
         event.preventDefault()
+        console.log(user)
         alert("login successful")
     }
-    return <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="border border-dark rounded p-4 shadow">
-                <h2 class="text-center mb-4">Registration Details</h2>
+    return <div className="container mt-5">
+    <div className="row justify-content-center">
+        <div className="col-md-6">
+            <div className="border border-dark rounded p-4 shadow">
+                <h2 className="text-center mb-4">Registration Details</h2>
             <form onSubmit={registerHandler}>
                 <pre>{JSON.stringify(user)}</pre>
                 User Name:<input type="username" onChange={usernameHandler} /> <br /><br />
@@ -47,9 +49,8 @@ let Register =()=>{
                 </select>
                 <br/><br />
                 Message:::<input type="textbox" onChange={messageHandler}/><br/><br />
-                <input type="checkbox" />Please Accept  t&c <br/><br />
+                <input type="checkbox" onChange={checkboxHandler}/>Please Accept  t&c <br/><br />
                 <input type="submit" value="Registration"/> 
-                   
                 <input type="submit" value="Cancel"/>
             </form>
             </div>
